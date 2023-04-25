@@ -1,10 +1,11 @@
 import './PortfolioItemPage.css';
 
-export const PortfolioItemPage = (selectedItem) => {
+
+export const PortfolioItemPage = (Title) => {
     
 
     return (
-        <p>{selectedItem}</p>
+        <p>{Title}</p>
 
     );
 };
