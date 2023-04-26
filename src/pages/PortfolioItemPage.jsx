@@ -1,11 +1,18 @@
 import './PortfolioItemPage.css';
 
 
-export const PortfolioItemPage = (Title) => {
+export const PortfolioItemPage = ({item}) => {
     
 
+
     return (
-        <p>{Title}</p>
+        <>
+        <div className="recipePage">
+        <h1>{item.recipe.label}</h1>
+        <img src={item.recipe.image} />
+        <p>{item.recipe.url}</p>
+    </div>
+        </>
 
     );
 };
