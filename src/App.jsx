@@ -6,18 +6,21 @@ import { PortfolioPage } from './pages/PortfolioPage';
 
 export const App = () => {
   
-  const [selectedItem, ] = useState(portfolioData.hits[3]);
-   
+  const [selectedItem] = useState('');
+  //const item = portfolioData ; 
   
 
   return (
+
+
     <>
     <Center h="100vh" flexDir="collumn">
-      <Heading>Recipes @ hand <Text style={{fontSize: "18px"}} as="div">with all the <br /> freshness of the land</Text>
+      <Heading bg='red.200'>Recipes @ hand <Text style={{fontSize: "18px"}} as="div">with all the <br /> freshness of the land</Text>
       </Heading>
     </Center>
-    {selectedItem ? <PortfolioItemPage item={selectedItem} /> : <PortfolioPage />}
+    {selectedItem ? <PortfolioItemPage item={selectedItem} /> : <PortfolioPage item={{item}}/>}
     </>
+
   );
 };
 

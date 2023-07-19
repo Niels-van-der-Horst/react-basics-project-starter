@@ -1,14 +1,19 @@
 import './PortfolioPage.css';
-import { PortfolioItemPage } from '../pages/PortfolioItemPage'
+import { PortfolioItemPage } from './PortfolioItemPage';
 
 export const PortfolioPage = ({item}) => {
+    
+
 
     return (
+        
         <>
         <h1>Test</h1>
-        {item.recipe.label.map((album) => (
+
+        {item.map((album) => (
             <PortfolioItemPage key={album.id} album={album} />
         ))}
-        </> 
+        </>
+       
     );     
 };
