@@ -1,16 +1,17 @@
 import './PortfolioPage.css';
 import { PortfolioItemPage } from './PortfolioItemPage';
 
-export const PortfolioPage = ({item}) => {
+export const PortfolioPage = ({items = [] }) => {
     
-
-
-    return (
+    
+    console.log(typeof items)
+    
+    return ( 
         
         <>
         <h1>Test</h1>
-
-        {item.map((album) => (
+        console.log(typeof items)
+        {items.map((album) => (
             <PortfolioItemPage key={album.id} album={album} />
         ))}
         </>
