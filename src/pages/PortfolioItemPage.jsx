@@ -1,16 +1,19 @@
 import './PortfolioItemPage.css';
 import  { Heading } from '@chakra-ui/react';
 
-export const PortfolioItemPage = ({album}) => {
+export const PortfolioItemPage = ({item, SelectedItem}) => {
     
-
+const clickHandler = () => {
+    SelectedItem(true);
+};
 
     return (
+        
         <>
         <div className="recipePage">
-        <Heading>{album.recipe.label}</Heading>
-        <img src={album.recipe.image} />
-        <p>{album.recipe.url}</p>
+        <Heading>{item.recipe.label}</Heading>
+        <img src={item.recipe.image} onClick={clickHandler} />
+        <p>{item.recipe.url}</p>
         </div>
         </>
 

@@ -6,24 +6,32 @@ import { PortfolioPage } from './pages/PortfolioPage';
 
 export const App = () => {
   
-  const [selectedItem] = useState('');
   
-  const myArray = Object.entries(portfolioData) ; 
-  const items = myArray;
-  console.log(typeof items);
+  const items = portfolioData.hits;  
+
+  
+  const [selectedItem] = useState(false);
+  
+
+
+
+  
 
   return (
-
 
     <>
     <Center h="100vh" flexDir="collumn">
       <Heading>Recipes @ hand <Text style={{fontSize: "18px"}} as="div">with all the <br /> freshness of the land</Text>
       </Heading>
     </Center>
-    {selectedItem ? <PortfolioItemPage item={selectedItem} /> : <PortfolioPage items={{items}}/>}
-    </>
+   {selectedItem ? <PortfolioItemPage item={selectedItem} /> : <PortfolioPage items={items}/>}
+    </> 
 
   );
 };
 
 
+
+  //Object.entries(items).map((album) => console.log(album)); 
+  
+  //console.log(typeof album);

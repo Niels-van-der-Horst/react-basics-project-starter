@@ -1,12 +1,13 @@
 
 
 
-export const RecipeItem = () => {
+export const RecipeItem = (item) => {
 
 
     return (
-    
-    <p>daar is ie dan!</p>
-    
+    <>
+    <p>test</p>
+    {item.recipe.label};
+    </>
     );
 };
