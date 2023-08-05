@@ -3,8 +3,9 @@ import  { Heading } from '@chakra-ui/react';
 
 export const PortfolioItemPage = ({item, SelectedItem}) => {
     
-const clickHandler = () => {
+const clickHandler = (clickFn) => {
     SelectedItem(true);
+
 };
 
     return (
@@ -19,3 +20,5 @@ const clickHandler = () => {
 
     );
 };
+
+

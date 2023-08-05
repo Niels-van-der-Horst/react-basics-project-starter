@@ -1,8 +1,10 @@
 import { Center, Heading, Text, } from '@chakra-ui/react';
 import { portfolioData } from './utils/data';
 import { useState } from 'react';
-import { PortfolioItemPage } from './pages/PortfolioItemPage';
+//import { PortfolioItemPage } from './pages/PortfolioItemPage';
 import { PortfolioPage } from './pages/PortfolioPage';
+import { RecipePage } from './pages/RecipePage';
+import { PortfolioItemPage } from './pages/PortfolioItemPage';
 
 export const App = () => {
   
@@ -10,9 +12,11 @@ export const App = () => {
   const items = portfolioData.hits;  
 
   
-  const [selectedItem] = useState(false);
-  
+  const [trackitem, setTrackItem] = useState(true);
 
+  const SelectedItem = (newMessage) => {
+    setTrackItem(newMessage); 
+  }
 
 
   
@@ -24,7 +28,7 @@ export const App = () => {
       <Heading>Recipes @ hand <Text style={{fontSize: "18px"}} as="div">with all the <br /> freshness of the land</Text>
       </Heading>
     </Center>
-   {selectedItem ? <PortfolioItemPage item={selectedItem} /> : <PortfolioPage items={items}/>}
+      {trackitem ? <RecipePage item={trackitem} SelectedItem={SelectedItem} /> : <PortfolioPage items={items}/>}
     </> 
 
   );
