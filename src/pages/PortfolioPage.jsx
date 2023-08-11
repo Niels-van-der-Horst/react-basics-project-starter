@@ -1,7 +1,7 @@
 import './PortfolioPage.css';
 import { PortfolioItemPage } from './PortfolioItemPage';
 
-export const PortfolioPage = ({items}) => {
+export const PortfolioPage = ({items, clickFn}) => {
     
     
 

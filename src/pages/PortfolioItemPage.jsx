@@ -1,10 +1,11 @@
 import './PortfolioItemPage.css';
 import  { Heading } from '@chakra-ui/react';
 
-export const PortfolioItemPage = ({item, SelectedItem}) => {
+export const PortfolioItemPage = ({item, setTrackItem}) => {
     
 const clickHandler = (clickFn) => {
-    SelectedItem(true);
+    setTrackItem(true);
+    console.log('click');
 
 };
 
